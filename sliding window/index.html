@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Window Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sliding Window Visualizer</h1>
+        <div class="visualization-box">
+            <div class="window-container">
+                <div id="array-container">
+                    <!-- Array elements will be dynamically added here -->
+                </div>
+                <div class="window">
+                    <div id="window-start">Start</div>
+                    <div id="window-end">End</div>
+                </div>
+            </div>
+            <div class="controls">
+                <label for="window-size">Window Size:</label>
+                <input type="number" id="window-size" value="3" min="1">
+                <button onclick="startVisualization()">Start Visualization</button>
+                <button onclick="randomizeArray()">Randomize Array</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

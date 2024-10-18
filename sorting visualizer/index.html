@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            color: #61dafb;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        #array-container {
+            display: flex;
+            align-items: flex-end;
+            width: 80%;
+            height: 60%;
+            background: #333;
+            border: 2px solid #61dafb;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .bar {
+            width: calc(100% / 30 - 4px); /* Adjusted for spacing */
+            margin: 0 2px;
+            background-color: #61dafb;
+            color: #fff; /* Text color inside bars */
+            text-align: center; /* Center align text */
+            transition: height 0.3s, background-color 0.3s;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="number"], select, button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="number"], select {
+            background-color: #444;
+            color: #61dafb;
+        }
+        button {
+            background-color: #61dafb;
+            color: #444;
+        }
+        button:hover {
+            background-color: #21a1f1;
+        }
+        button:active {
+            background-color: #1a81c1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sorting Visualizer</h1>
+    <div id="array-container"></div>
+    <div class="controls">
+        <input type="number" id="array-size-input" value="30" min="1" max="100">
+        <button onclick="changeArraySize()">Change Array Size</button>
+        <select id="algorithm-select">
+            <option value="bubbleSort">Bubble Sort</option>
+            <option value="insertionSort">Insertion Sort</option>
+            <option value="selectionSort">Selection Sort</option>
+            <option value="mergeSort">Merge Sort</option>
+            <option value="quickSort">Quick Sort</option>
+        </select>
+        <button onclick="startSort()">Start Sort</button>
+        <button onclick="randomizeArray()">Randomize Array</button>
+    </div>
+    <div id="selected-algorithm"></div>
+    <script src="script.js"></script>
+</body>
+</html>

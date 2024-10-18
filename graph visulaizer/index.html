@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Traversal Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Graph Traversal Visualizer</h1>
+    <div id="graph-container"></div>
+    <div class="controls">
+        <select id="algorithm-select">
+            <option value="bfs">Breadth-First Search (BFS)</option>
+            <option value="dfs">Depth-First Search (DFS)</option>
+        </select>
+        <select id="graph-size-select">
+            <option value="extra-small">Extra Small Graph</option>
+            <option value="small">Small Graph</option>
+            <option value="medium">Medium Graph</option>
+            <option value="large">Large Graph</option>
+        </select>
+        <button onclick="startTraversal()">Start Traversal</button>
+        <button onclick="resetGraph()">Reset Graph</button>
+    </div>
+    <div id="selected-algorithm"></div>
+    <div id="traversal-output"></div>
+    <script src="script.js"></script>
+</body>
+</html>
